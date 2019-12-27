@@ -1,7 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$evolution-palette: (
+  50 : #e0edf9,
+  100 : #b3d1f0,
+  200 : #80b3e6,
+  300 : #4d94db,
+  400 : #267dd4,
+  500 : #0066cc,
+  600 : #005ec7,
+  700 : #0053c0,
+  800 : #0049b9,
+  900 : #0038ad,
+  A100 : #d7e1ff,
+  A200 : #a4baff,
+  A400 : #7194ff,
+  A700 : #5881ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+$evolution-accent: (
+  50 : #e0efff,
+  100 : #b3d8ff,
+  200 : #80beff,
+  300 : #4da4ff,
+  400 : #2691ff,
+  500 : #007dff,
+  600 : #0075ff,
+  700 : #006aff,
+  800 : #0060ff,
+  900 : #004dff,
+  A100 : #ffffff,
+  A200 : #f2f5ff,
+  A400 : #bfcfff,
+  A700 : #a6bbff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$evolution-app-primary: mat-palette($evolution-palette);
+$evolution-app-accent: mat-palette($evolution-accent);
+
+$evolution-app-theme: mat-light-theme($evolution-app-primary, $evolution-app-accent);
+
+@include angular-material-theme($evolution-app-theme);
+
 html, body {
   margin: 0;
   padding: 0;
-
   height: 100%;
 }
