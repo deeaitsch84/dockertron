@@ -27,7 +27,6 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
             "customWebpackConfig": {
               "path": "./angular.webpack.js"
             }
