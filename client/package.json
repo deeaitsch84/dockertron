@@ -64,6 +64,7 @@
     "codelyzer": "5.1.2",
     "conventional-changelog-cli": "2.0.32",
     "core-js": "3.1.4",
+    "docker-modem": "2.0.4",
     "electron": "7.1.7",
     "electron-builder": "21.2.0",
     "electron-reload": "1.5.0",
@@ -88,5 +89,6 @@
   },
   "engines": {
     "node": ">=10.9.0"
-  }
+  },
+  "dependencies": {}
 }

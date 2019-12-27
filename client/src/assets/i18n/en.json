@@ -2,6 +2,9 @@
   "PAGES": {
       "HOME": {
           "TITLE": "App works !"
+      },
+      "DASHBOARD" : {
+          "TITLE": "Dashboard"
       }
   }
 }
