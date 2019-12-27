@@ -12,16 +12,13 @@ import {AppConfig} from "../../environments/environment";
 export class DockerService<T extends Resource> {
 
   private readonly url: string;
+
   constructor(
     private http: HttpClient,
     endpoint: string,
     private serializer: Serializer
   ) {
     this.url = AppConfig.dockertronApiUrl + '/' + endpoint;
-  }
-
-  protected client(): HttpClient {
-    return this.http;
   }
 
   public create(item: T): Observable<T> {
@@ -52,6 +49,10 @@ export class DockerService<T extends Resource> {
   delete(id: number) {
     return this.client()
       .delete(`${this.url}/${id}`);
+  }
+
+  protected client(): HttpClient {
+    return this.http;
   }
 
   private convertData(data: any): T[] {

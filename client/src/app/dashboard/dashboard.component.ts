@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Container} from "../model/container";
 import {ContainerService} from "../services/container.service";
 import {HttpParams} from "@angular/common/http";
@@ -14,7 +14,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private containerService: ContainerService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.containerService.list(new HttpParams()).subscribe((container: Container[]) => this.container = container);

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {DockerService} from "./docker.service";
 import {Container} from "../model/container";
 import {HttpClient} from "@angular/common/http";
