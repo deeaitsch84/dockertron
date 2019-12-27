@@ -1,4 +1,4 @@
-import { Resource } from './resource';
+import {Resource} from './resource';
 
 describe('Resource', () => {
   it('should create an instance', () => {

@@ -1,10 +1,10 @@
 {
   "PAGES": {
-      "HOME": {
-          "TITLE": "App works !"
-      },
-      "DASHBOARD" : {
-          "TITLE": "Dashboard"
-      }
+    "HOME": {
+      "TITLE": "App works !"
+    },
+    "DASHBOARD": {
+      "TITLE": "Dashboard"
+    }
   }
 }
