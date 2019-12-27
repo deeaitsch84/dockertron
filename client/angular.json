@@ -27,9 +27,6 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/docker-modem/lib/modem.js"
-            ],
             "customWebpackConfig": {
               "path": "./angular.webpack.js"
             }
