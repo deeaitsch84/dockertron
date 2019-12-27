@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Container} from "../model/container";
+import {ContainerService} from "../services/container.service";
+import {HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  container: Container[];
+
+  constructor(
+    private containerService: ContainerService
+  ) { }
 
   ngOnInit() {
+    this.containerService.list(new HttpParams()).subscribe((container: Container[]) => this.container = container);
   }
 
 }

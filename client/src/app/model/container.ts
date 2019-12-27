@@ -1,2 +1,4 @@
-export class Container {
+import {Resource} from "./resource";
+
+export class Container extends Resource {
 }
