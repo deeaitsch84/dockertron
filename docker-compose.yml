@@ -1,0 +1,32 @@
+version: '3.0'
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    container_name: dockertron-api
+    volumes:
+      - .:/home/www/dockertron
+      - /var/run/docker.sock:/var/run/docker.sock
+    env_file: .env
+    restart: always
+    command: php-fpm -F -R
+
+  apache:
+    build:
+      context: .
+      dockerfile: .docker/apache/Dockerfile
+    container_name: dockertron-apache
+    ports:
+      - 89:80
+      - 449:443
+    volumes:
+      - .docker/apache/vhosts:/etc/apache2/sites-enabled
+      - .:/home/www/dockertron
+    restart: always
+    env_file: .env
+    command: apachectl -DFOREGROUND -e info
+    links:
+      - api
