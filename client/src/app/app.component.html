@@ -1,1 +1,31 @@
-<router-outlet></router-outlet>
+<div class="dockertron-app">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <img src="../assets/logo.png" class="dockertron-app-logo"/>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened>
+      <mat-nav-list class="dockertron-app-side-nav-list">
+        <a
+          mat-list-item
+          routerLinkActive="list-item-active"
+          routerLink="/dashboard">
+          <mat-icon matListIcon> dashboard</mat-icon>
+          Dashboard
+        </a>
+        <mat-divider></mat-divider>
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;" class="dockertron-app-content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+

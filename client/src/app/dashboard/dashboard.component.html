@@ -1,1 +1,62 @@
-<button color="primary" mat-raised-button>123</button>
+<div fxLayout fxLayoutGap="10px">
+  <div class="dashboard-tile mat-card" fxFlex="50">
+    <div class="dashboard-tile-content">
+      <button mat-fab aria-label="icon-button">
+        <mat-icon>local_shipping</mat-icon>
+      </button>
+      <div class="dashboard-tile-content-magic-number">
+        <p>
+          <span *ngIf="info.hasOwnProperty('ContainersRunning')">{{info["ContainersRunning"]}}</span>
+        </p>
+        <p class="dashboard-tile-content-magic-number-footer">container running</p>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-tile mat-card" fxFlex="50">
+    <div class="dashboard-tile-content">
+      <button mat-fab aria-label="icon-button">
+        <mat-icon>image</mat-icon>
+      </button>
+      <div class="dashboard-tile-content-magic-number">
+        <p>
+          <span *ngIf="info.hasOwnProperty('Images')">{{info["Images"]}}</span>
+        </p>
+        <p class="dashboard-tile-content-magic-number-footer">images build</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dashboard-charts" fxLayout fxLayoutGap="10px">
+  <div class="dashboard-charts-chart memory mat-card" fxFlex="50">
+    <ngx-charts-line-chart
+      *ngIf="memoryData.length > 0"
+      [scheme]="'flame'"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [xAxisLabel]="'Time'"
+      [yAxisLabel]="'Memory usage'"
+      [timeline]="true"
+      [results]="memoryData"
+      [yScaleMax]="100">
+    </ngx-charts-line-chart>
+  </div>
+  <div class="dashboard-charts-chart cpu mat-card" fxFlex="50">
+    <ngx-charts-line-chart
+      *ngIf="cpuData.length > 0"
+      [scheme]="'flame'"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [xAxisLabel]="'Time'"
+      [yAxisLabel]="'CPU usage'"
+      [timeline]="true"
+      [results]="cpuData"
+      [yScaleMax]="100">
+    </ngx-charts-line-chart>
+  </div>
+</div>
