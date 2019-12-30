@@ -95,6 +95,13 @@
     "node": ">=10.9.0"
   },
   "dependencies": {
-    "ng-node-environment": "1.1.1"
+    "@angular/flex-layout": "8.0.0-beta.27",
+    "@swimlane/ngx-charts": "13.0.0",
+    "@types/dockerode": "2.5.21",
+    "dockerode": "3.0.2",
+    "moment": "2.24.0",
+    "ng-node-environment": "1.1.1",
+    "ngx-logger": "4.0.8",
+    "ngx-moment": "3.5.0"
   }
 }

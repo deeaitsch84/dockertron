@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ContainerService } from './container.service';
+import { DockerService } from './docker.service';
 
-describe('ContainerService', () => {
+describe('DockerApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: ContainerService = TestBed.get(ContainerService);
+    const service: DockerService = TestBed.get(DockerService);
     expect(service).toBeTruthy();
   });
 });

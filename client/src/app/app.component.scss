@@ -1,0 +1,18 @@
+.dockertron-app {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &-logo {
+    width: 300px;
+  }
+  &-side-nav-list {
+    padding-top: 0;
+  }
+  &-content {
+    padding:10px;
+    box-sizing: border-box;
+  }
+}
